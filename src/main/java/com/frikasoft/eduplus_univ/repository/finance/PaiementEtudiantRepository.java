@@ -18,13 +18,4 @@ public interface PaiementEtudiantRepository extends JpaRepository<PaiementEtudia
             "inner join where nom like:keyword or postnom like:keyword or prenom like:keyword")
     public List<PaiementEtudiantAdapter> getPaieEtudiantByAnneeAcademique(@Param("keyword")String keyword);
 
-    String nomEtudiant;
-    String postnom;
-    String prenom;
-    String faculte;
-    String auditoire;
-    Double montant;
-    String motif;
-    Date datePaiement;
-    String Observation;
 }

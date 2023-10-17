@@ -64,7 +64,7 @@ public class EtudiantServicePost implements IEtudiantPost {
             if(idForUpdate!=null && idForUpdate>0) {
                 etudiant = etudiantRepository.findById(idForUpdate).orElse(etudiant);
                 etudiant.setAdresseEtudiant(adresse);
-                etudiant.setDateCreate(new java.sql.Date(millis));
+                etudiant.setDateCreate(new Date(millis));
                 etudiant.setLieuNaissance(lieuNaissance);
                 etudiant.setNom(nom);
                 etudiant.setNomTuteur(nomTuteur);

@@ -1,5 +1,6 @@
 package com.frikasoft.eduplus_univ.settings;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
 
@@ -31,6 +32,12 @@ public class AppUtilities {
         }
     }
     public static void controlValue(Double d, String message)throws DataValueException{
+        if(d==null){
+            throw new DataValueException(message);
+        }
+    }
+
+    public static void controlValue(BigDecimal d, String message)throws DataValueException{
         if(d==null){
             throw new DataValueException(message);
         }
